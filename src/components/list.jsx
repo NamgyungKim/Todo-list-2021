@@ -5,15 +5,19 @@ const List = (props) => {
 
   return (
     <ul className="con">
-      <li className="list">
-        <span className="check">
-          <i className="fas fa-check"></i>
-        </span>
-        {list}
-        <span className="delete">
-          <i className="fas fa-times"></i>
-        </span>
-      </li>
+      {
+        list.map((todo)=>(
+          <li className="list">
+            <span className="check">
+              <i className="fas fa-check"></i>
+            </span>
+            { todo }
+            <span className="delete">
+              <i className="fas fa-times"></i>
+            </span>
+          </li>
+        ))
+      }
     </ul>
   )
 }
