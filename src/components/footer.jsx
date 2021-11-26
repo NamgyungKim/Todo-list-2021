@@ -2,7 +2,10 @@ import React from 'react';
 
 const Footer = (props) => {
   const gauge = props.gauge()
-  console.log(gauge)
+
+  const resetBtn = () => {
+    props.setList([])
+  }
 
   return (
     <footer className="footer">
@@ -19,7 +22,7 @@ const Footer = (props) => {
           })()
         }
       </div>
-      <button type="button" className="reset_btn">RESET</button>
+      <button onClick={(()=>resetBtn())} type="button" className="reset_btn">RESET</button>
     </footer>
   )
 }

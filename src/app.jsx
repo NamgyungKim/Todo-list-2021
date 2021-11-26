@@ -29,7 +29,7 @@ const App = () => {
       <Header />
       <Input list={list} setList={setList} />
       <List list={list} setList={setList}/>
-      <Footer gauge={gauge}/>
+      <Footer gauge={gauge} setList={setList}/>
     </div>
   );
 }
