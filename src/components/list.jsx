@@ -2,7 +2,6 @@ import React from 'react';
 
 const List = (props) => {
   const list = props.list
-
   return (
     <ul className="con" key='1'>
       {

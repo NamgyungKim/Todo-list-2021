@@ -2,8 +2,11 @@ import React, { useRef } from 'react';
 
 const Input = (props) => {
   const input_vlue = useRef()
+  const list = props.list
+
   const add_list = () => {
     console.log(input_vlue.current.value)
+    props.setList(list.concat(input_vlue.current.value))
   }
 
   return(
