@@ -4,11 +4,13 @@ import Input from './components/input';
 import List from './components/list';
 
 const App = () => {
+  const list = ['공부하기']
+
   return (
     <div className="wrap">
       <Header />
       <Input />
-      <List />
+      <List list={list}/>
     </div>
   );
 }

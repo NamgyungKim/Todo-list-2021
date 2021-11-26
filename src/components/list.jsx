@@ -1,15 +1,17 @@
 import React from 'react';
 
 const List = (props) => {
+  const list = props.list
+
   return (
     <ul className="con">
       <li className="list">
         <span className="check">
-          <i class="fas fa-check"></i>
+          <i className="fas fa-check"></i>
         </span>
-        공부하기
+        {list}
         <span className="delete">
-          <i class="fas fa-times"></i>
+          <i className="fas fa-times"></i>
         </span>
       </li>
     </ul>
