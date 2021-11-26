@@ -5,13 +5,13 @@ const Input = (props) => {
   const list = props.list
 
   const add_list = () => {
-    props.setList(list.concat(input_vlue.current.value))
+    props.setList(list.concat({name:input_vlue.current.value, check:false}))
+    input_vlue.current.value = ''
   }
 
   const onKeyPress = (e) => {
     if(e.key === 'Enter'){
       add_list()
-      input_vlue.current.value = ''
     }
   }
 

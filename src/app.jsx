@@ -5,13 +5,17 @@ import Input from './components/input';
 import List from './components/list';
 
 const App = () => {
-  const [list,setList] = useState(['공부하기','장보기','청소하기'])
+  const [list,setList] = useState([
+    {name:'공부하기', check: false},
+    {name:'장보기',check: false}, 
+    {name:'청소하기',check: false}
+  ])
 
   return (
     <div className="wrap">
       <Header />
       <Input list={list} setList={setList} />
-      <List list={list} />
+      <List list={list} setList={setList}/>
     </div>
   );
 }
