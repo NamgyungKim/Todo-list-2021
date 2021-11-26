@@ -1,8 +1,11 @@
 import './app.css';
+import Header from './components/header';
 
 const App = () => {
   return (
-    <h1>Hello</h1>
+    <div className="wrap">
+      <Header />
+    </div>
   );
 }
 
