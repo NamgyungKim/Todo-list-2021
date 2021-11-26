@@ -8,7 +8,9 @@ header { width: 100%; height: 4rem; text-align: center; background-color: #2C314
 
 /* list */
 .con {height: auto; border-left: 1px solid #EFEFEF; border-right: 1px solid #EFEFEF; background-color: white; line-height: 3rem;}
-.list { padding-left: 1rem; border-bottom: 1px solid #EFEFEF; line-height: 50px; cursor: pointer; transition: .5s;}
+.list {display: flex; justify-content: space-between; padding-left: 1rem; border-bottom: 1px solid #EFEFEF; line-height: 50px; cursor: pointer; transition: .5s;}
+.list div { width: 100%;}
 .list:hover {color: #808080;}
 .list .check{ display: inline-block; width: 2rem; text-align: center; color: #D95B5B; font-size: 1rem;}
-.list .delete { float: right; width: 2rem; margin-right: .5rem; color: #2C3140; text-align: center; font-size: 1.4rem;}
+.list .delete { float: right; width: 2rem; margin-right: .5rem; color: #2C3140; text-align: center; font-size: 1.4rem; opacity: 0; transition: .5s;}
+.list:hover .delete{opacity: 1;}

@@ -13,22 +13,30 @@ const List = (props) => {
     }
     props.setList(newArr)
   }
+
+  const deleteList = (index) => {
+    let newArr = [...list]
+    newArr.splice(index,1)
+    console.log(newArr)
+    props.setList(newArr)
+  }
   
   return (
     <ul className="con" key='1'>
       { 
         list.map((todo,index)=>(
           <li 
-            onClick={(()=>check(index))} 
             style={todo.check ? {textDecoration:'line-through', color:'#ddd'}:{} } 
             className="list" 
             key={index}
           >
-            <span className="check">
-              { todo.check && <span><i className="fas fa-check"></i></span> }
-            </span>
-            { todo.name }
-            <span className="delete">
+            <div onClick={(()=>check(index))} >
+              <span className="check">
+                { todo.check && <span><i className="fas fa-check"></i></span> }
+              </span>
+              { todo.name }
+            </div>
+            <span onClick={(()=>deleteList(index))} className="delete">
               <i className="fas fa-times"></i>
             </span>
           </li>
