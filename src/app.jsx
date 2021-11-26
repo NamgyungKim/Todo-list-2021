@@ -17,7 +17,11 @@ const App = () => {
     for(let i = 0; i < list.length; i++){
       list[i].check === true && done++
     }
-    return Math.floor(done/list.length*100)
+    if( Math.floor(done/list.length*100) >= 0){
+      return Math.floor(done/list.length*100)
+    }else{
+      return null
+    }
   }
 
   return (
