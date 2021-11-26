@@ -1,4 +1,4 @@
-.wrap { max-width: 425px; height: 700px; margin: 4rem auto; background-color: #EFEFEF; }
+.wrap { position: relative; max-width: 425px; height: 100vh; margin: 0 auto; background-color: #EFEFEF; }
 header { width: 100%; height: 4rem; text-align: center; background-color: #2C3140; color: #fff; font-weight: bold; font-size: 2rem; line-height: 4rem; cursor: default;}
 
 /* input */
@@ -14,3 +14,9 @@ header { width: 100%; height: 4rem; text-align: center; background-color: #2C314
 .list .check{ display: inline-block; width: 2rem; text-align: center; color: #D95B5B; font-size: 1rem;}
 .list .delete { float: right; width: 2rem; margin-right: .5rem; color: #2C3140; text-align: center; font-size: 1.4rem; opacity: 0; transition: .5s;}
 .list:hover .delete{opacity: 1;}
+
+/* footer */
+.footer{position: absolute; display: flex; justify-content:space-between; left: 0; bottom: 0; width: 100%; height: 5rem; padding: 1.5rem; background-color: #9BD1F2; box-sizing: border-box;}
+.rate { width: 75%; height: 2rem; border-radius: 1em; background-color: white; }
+.rate .gauge{text-align: center; height: 2rem; border-radius: 1em;  background-color: #D95B5B; color: white; font-weight: bold; line-height: 2rem; transition: .5s;}
+.reset_btn{ max-width: 70px; width: 20%; border: none; border-radius: 5px; background-color: #D95B5B; color: white; font-weight: bold; box-sizing: border-box;}
