@@ -7,9 +7,8 @@ import List from './components/list';
 
 const App = () => {
   const [list,setList] = useState([
-    {name:'공부하기', check: false},
-    {name:'장보기',check: false}, 
-    {name:'청소하기',check: false}
+    {name:'완료시 클릭해주세요', check: true},
+    {name:'할일 목록을 써주세요',check: false}
   ])
   
   const gauge = () => {
