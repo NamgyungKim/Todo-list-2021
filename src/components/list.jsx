@@ -4,10 +4,10 @@ const List = (props) => {
   const list = props.list
 
   return (
-    <ul className="con">
+    <ul className="con" key='1'>
       {
-        list.map((todo)=>(
-          <li className="list">
+        list.map((todo,index)=>(
+          <li className="list" key={index}>
             <span className="check">
               <i className="fas fa-check"></i>
             </span>
