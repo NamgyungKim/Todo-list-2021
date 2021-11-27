@@ -5,7 +5,9 @@ const Input = (props) => {
   const list = props.list
 
   const add_list = () => {
-    props.setList(list.concat({name:input_vlue.current.value, check:false}))
+    if(input_vlue.current.value !== ''){
+      props.setList(list.concat({name:input_vlue.current.value, check:false}))
+    }
     input_vlue.current.value = ''
   }
 

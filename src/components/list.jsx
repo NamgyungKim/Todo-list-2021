@@ -17,7 +17,6 @@ const List = (props) => {
   const deleteList = (index) => {
     let newArr = [...list]
     newArr.splice(index,1)
-    console.log(newArr)
     props.setList(newArr)
   }
   
